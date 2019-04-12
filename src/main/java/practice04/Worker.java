@@ -7,6 +7,7 @@ public class Worker extends Person{
     }
 
     public String introduce() {
-        return String.format("%s I am a Worker. I have a job.", super.introduce(), this.getName(), this.getAge());
+        String personIntroduce = super.introduce();
+        return String.format("%s I am a Worker. I have a job.", personIntroduce, this.getName(), this.getAge());
     }
 }
