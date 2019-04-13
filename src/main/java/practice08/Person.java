@@ -5,10 +5,18 @@ public class Person {
     private int age;
     private int id;
 
-    public Person(int age, String name,  int id) {
+    public Person(int id, String name,  int age) {
         this.name = name;
         this.age = age;
         this.id = id;
+    }
+
+    public boolean equals(Object obj) {
+        Person person = (Person) obj;
+        if(person != null && person.getId() == this.getId()) {
+            return true;
+        }
+        return false;
     }
 
     public String introduce() {
